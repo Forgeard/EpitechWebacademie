@@ -1,0 +1,182 @@
+																						/*INDEX*/
+
+
+header{
+	width: 98%;
+	margin: 0 auto;
+	border-bottom: 2px solid #E67E22;
+	padding-bottom: 2px;
+	
+}
+																	/*MENU NAVIGATION*/						
+nav{
+	width: 100%;
+}
+
+ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+	padding:0;
+	margin:0;
+	width: 100%;
+	justify-content: center;
+}
+
+													/*style liste / boutons*/
+
+
+
+li{
+	display: flex; /*applique display flex aux enfants Label si non "text-align" ne fonctionne pas*/
+	font-family: helvetica, serif;	
+	color:#00ACE9;
+	font-weight: bold;
+	font-size: 3vh;
+	margin: 2px;
+	border: 2px solid #00ACE9;
+	border-radius: 10px;
+	flex-grow: 1;
+	height: 6vh;
+	justify-content: center; /*centre horizontalement les enfants*/
+	align-items: center; /*alignement vertical des enfants*/
+}
+
+li:hover{
+	border: 2px dashed #E67E22;
+	transition: 0s;
+}
+
+li:active{
+	border: 2px dashed #00ACE9;
+}
+
+input{
+	display:none;
+}
+
+.selector_iframe:checked + li{
+	border: 2px solid #E67E22;
+}
+
+										/*extension zone active des Labels*/
+label{
+	text-align: center;
+	line-height: 6vh;
+	width:100%;
+}
+
+													/*Logo et lien WA*/
+
+.conteneur_WA{
+	width: 33vw;
+	height: 6vh;
+	margin: 4px;
+}
+									/*Background et alignement*/
+.lien_WA{	
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	background-image: url(img/logo_webacademie.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	text-align: center;
+	height: 6vh;
+	line-height: 6vh;
+}
+									/*style font lien*/
+.p_WA{
+	font-weight: bold;
+	font-family: helvetica, serif;		
+	color: rgba(0,0,0,0);
+	font-size: 2.5vmin;
+	margin: 0;
+}
+									/*Animation Logo WA*/
+.conteneur_WA:hover .lien_WA{	
+	background-position: 33vw 6vh;
+	transition: 3s;
+}
+
+.conteneur_WA:hover p{
+	color: rgba(14,71,94,1);
+	transition: 3s;
+}
+
+.conteneur_WA:hover .maj_WA{
+	color: rgba(0,172,233,1);
+	transition: 3s;
+}
+
+																/* IFRAME */
+
+											/*Si bouton 1 checked*/
+#iframe1:checked ~ .iframe2, .iframe3, .iframe4{
+	border: none;
+	width: 0;
+	height: 0;
+}
+
+#iframe1:checked ~ .iframe1{
+	position: absolute;
+	border: 2px solid #00ACE9;
+	border-radius: 10px;
+	left: 2.25vw;
+	top: 16.5vh;
+	width: 95vw;
+	height: 81vh;
+	transition:2s;
+}
+											/*Si bouton 2 checked*/
+#iframe2:checked ~ .iframe1, .iframe3, .iframe4{
+	border: none;
+	width: 0;
+	height: 0;
+}
+
+#iframe2:checked ~ .iframe2{
+	position: absolute;
+	border: 2px solid #00ACE9;
+	border-radius: 10px;
+	left: 2.25vw;
+	bottom: 2vh;
+	width: 95vw;
+	height: 81vh;
+	transition:2s;
+}
+											/*Si bouton 3 checked*/
+#iframe3:checked ~ .iframe1, .iframe2, .iframe4{
+	border: none;
+	width: 0;
+	height: 0;
+}
+
+#iframe3:checked ~ .iframe3{
+	position: absolute;
+	border: 2px solid #00ACE9;
+	border-radius: 10px;
+	right: 2.5vw;
+	bottom: 2vh;
+	width: 95vw;
+	height: 81vh;
+	transition:2s;
+}
+											/*Si bouton 4 checked*/
+#iframe4:checked ~ .iframe1, .iframe2, .iframe3{
+	border: none;
+	width: 0;
+	height: 0;
+}
+
+#iframe4:checked ~ .iframe4{
+	position: absolute;
+	border: 2px solid #00ACE9;
+	border-radius: 10px;
+	right: 2.5vw;
+	top: 16.5vh;
+	width: 95vw;
+	height: 81vh;
+	transition:2s;
+}
